@@ -20,18 +20,18 @@
 
 ## Independent Project Handoff
 
-- [ ] Create a dedicated private GitHub repository for Proofroom.
-- [ ] Commit the standalone source, course data, design decisions, and deployment documentation.
+- [x] Create a dedicated private GitHub repository for Proofroom.
+- [x] Commit the standalone source, course data, design decisions, and deployment documentation.
 - [ ] Create a separate Manus task for future Proofroom development.
 - [ ] Confirm the new task points to the dedicated Proofroom repository and current standalone deployment.
 
 ## Dedicated Task and GitHub Pages Publication
 
-- [ ] Confirm the validated standalone source and exclude build output, dependencies, logs, and secrets.
-- [ ] Create a dedicated private `proofroom-interview-course` GitHub repository.
-- [ ] Initialize Git, commit the standalone source, and push `main`.
-- [ ] Create a workflow-free `/docs` GitHub Pages companion with relative assets and live-course handoff.
-- [ ] Add and run a `pages:check` validator, TypeScript check, production build, and diff review.
+- [x] Confirm the validated standalone source and exclude build output, dependencies, logs, and secrets.
+- [x] Create a dedicated private `proofroom-interview-course` GitHub repository.
+- [x] Initialize Git, commit the standalone source, and push `main`.
+- [x] Create a workflow-free `/docs` GitHub Pages companion with relative assets, live-course handoff, reciprocal Proofwork link, and a persistent module checklist.
+- [x] Add and run a `pages:check` validator, TypeScript check, production build, diff review, desktop interaction check, and mobile layout check.
 - [ ] Create a separate Manus task with the repository, Pages URL, and standalone deployment context.
 - [ ] Configure `main` → `/docs` Pages publishing and verify the public site.
 - [ ] Update Proofwork’s Proofroom links to the GitHub Pages URL.
