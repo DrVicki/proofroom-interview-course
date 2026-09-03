@@ -22,8 +22,8 @@
 
 - [x] Create a dedicated private GitHub repository for Proofroom.
 - [x] Commit the standalone source, course data, design decisions, and deployment documentation.
-- [ ] Create a separate Manus task for future Proofroom development.
-- [ ] Confirm the new task points to the dedicated Proofroom repository and current standalone deployment.
+- [x] Create a separate private Manus task for future Proofroom development using `MANUS_TASK_HANDOFF.md`.
+- [x] Confirm the new task points to the dedicated Proofroom repository, Pages companion, and current standalone deployment.
 
 ## Dedicated Task and GitHub Pages Publication
 
@@ -32,7 +32,7 @@
 - [x] Initialize Git, commit the standalone source, and push `main`.
 - [x] Create a workflow-free `/docs` GitHub Pages companion with relative assets, live-course handoff, reciprocal Proofwork link, and a persistent module checklist.
 - [x] Add and run a `pages:check` validator, TypeScript check, production build, diff review, desktop interaction check, and mobile layout check.
-- [ ] Create a separate Manus task with the repository, Pages URL, and standalone deployment context.
-- [ ] Configure `main` → `/docs` Pages publishing and verify the public site.
-- [ ] Update Proofwork’s Proofroom links to the GitHub Pages URL.
-- [ ] Deliver the new task, repository, and Pages publication details.
+- [x] Create a separate private Manus task with the repository, Pages URL, and standalone deployment context.
+- [x] Configure `main` → `/docs` Pages publishing and verify the public site, reciprocal Proofwork link, module checklist, and persisted 25% review state.
+- [x] Update Proofwork’s Proofroom links to the GitHub Pages URL.
+- [x] Deliver the new task, repository, and Pages publication details.
