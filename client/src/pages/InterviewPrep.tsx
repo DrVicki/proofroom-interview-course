@@ -63,6 +63,13 @@ export default function InterviewPrep() {
             <a href="#why">Why rehearse</a>
             <a href="#method">The method</a>
             <a href="#course">Course</a>
+            <a
+              href="https://drvicki.github.io/copilot-resume-skill-course/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Proofwork
+            </a>
           </nav>
           <Button onClick={scrollToCourse} className="header-cta proofroom-cta">
             Enter the room <ArrowRight size={16} />
@@ -335,7 +342,16 @@ export default function InterviewPrep() {
             {interviewCourseMeta.title}<br />
             Created and instructed by <strong>{interviewCourseMeta.instructor}</strong>
           </p>
-          <a href="#top">Return to top <ArrowRight size={15} /></a>
+          <nav className="footer-links" aria-label="Proofroom course connections">
+            <a
+              href="https://drvicki.github.io/copilot-resume-skill-course/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Explore Proofwork <ArrowRight size={15} />
+            </a>
+            <a href="#top">Return to top <ArrowRight size={15} /></a>
+          </nav>
         </div>
       </footer>
     </div>

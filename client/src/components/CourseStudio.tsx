@@ -21,6 +21,7 @@ import {
   Lightbulb,
   NotebookPen,
   Quote,
+  RotateCcw,
   ShieldCheck,
   Upload,
 } from "lucide-react";
@@ -35,6 +36,7 @@ type WorkEntry = {
 };
 
 type CourseState = {
+  schemaVersion: 2;
   studentName: string;
   courseSection: string;
   work: Record<string, WorkEntry>;
@@ -71,6 +73,7 @@ const emptyEntry = (): WorkEntry => ({
 });
 
 const initialState = (courseLessons: Lesson[]): CourseState => ({
+  schemaVersion: 2,
   studentName: "",
   courseSection: "",
   work: Object.fromEntries(courseLessons.map((lesson) => [lesson.id, emptyEntry()])),
@@ -298,6 +301,26 @@ export default function CourseStudio({
     }));
   };
 
+  const clearSavedCourseData = () => {
+    const hasSavedWork =
+      Boolean(state.studentName.trim() || state.courseSection.trim()) ||
+      Object.values(state.work).some(
+        (entry) => entry.notes || entry.evidence || entry.reflection || entry.completed,
+      );
+
+    if (
+      hasSavedWork &&
+      !window.confirm(
+        "Clear your saved Proofroom name, notes, evidence, reflections, and completion marks from this browser? This cannot be undone.",
+      )
+    ) {
+      return;
+    }
+
+    setState(initialState(courseLessons));
+    toast.success("Saved Proofroom course data cleared from this browser.");
+  };
+
   const goToLesson = (index: number) => {
     setActiveIndex(index);
     window.setTimeout(() => {
@@ -424,6 +447,15 @@ ${certificateSummary}
             <span className="progress-caption">
               {completedCount} of {courseLessons.length} lessons complete
             </span>
+            <Button
+              type="button"
+              variant="ghost"
+              className="clear-course-button"
+              onClick={clearSavedCourseData}
+            >
+              <RotateCcw size={14} aria-hidden="true" />
+              Clear this browser’s course data
+            </Button>
           </div>
         </div>
 
@@ -685,15 +717,25 @@ ${certificateSummary}
                   } left to complete.`}
             </h3>
             <p>
-              Download one combined text file for Canvas. At 100%, you can also download a
-              completion certificate credited to {meta.instructor}.
+              Download one combined text file for Canvas. At 100%, enter your name to unlock a
+              named completion certificate credited to {meta.instructor}.
             </p>
           </div>
           <div className="completion-actions">
             <Button variant="outline" onClick={downloadAll}>
               <FileDown size={17} /> Download course bundle
             </Button>
-            <Button onClick={downloadCertificate} disabled={progress !== 100}>
+            <Button
+              onClick={downloadCertificate}
+              disabled={progress !== 100 || !state.studentName.trim()}
+              title={
+                progress !== 100
+                  ? "Complete all four lessons to unlock the certificate."
+                  : !state.studentName.trim()
+                    ? "Enter your name above to create a named certificate."
+                    : "Download your named completion certificate."
+              }
+            >
               <Download size={17} /> Completion certificate
             </Button>
           </div>

@@ -171,7 +171,8 @@ button:active, a:active { transform: scale(.97); }
 .final-cta p { max-width: 690px; margin: 0 auto 2rem; color: var(--ink-soft); line-height: 1.7; }
 footer { display: grid; grid-template-columns: auto 1fr auto; gap: 3rem; align-items: center; padding: 2rem max(1.5rem,calc((100vw - 1200px)/2)); background: var(--ink); color: var(--paper-light); }
 footer p { margin: 0; color: #bdc7c5; font-size: .75rem; line-height: 1.6; text-align: center; }
-footer a { color: var(--proof); font-size: .75rem; font-weight: 700; }
+.footer-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 1rem; }
+.footer-links a { color: var(--proof); font-size: .75rem; font-weight: 700; }
 .footer-brand small { color: #aab6b4; }
 
 .not-found-page { min-height: 100vh; display: grid; place-items: center; padding: 1.5rem; }
@@ -242,6 +243,7 @@ footer a { color: var(--proof); font-size: .75rem; font-weight: 700; }
   .final-cta { padding: 6rem 1rem; text-align: left; }
   footer { grid-template-columns: 1fr; gap: 1.4rem; }
   footer p { text-align: left; }
+  .footer-links { justify-content: flex-start; }
 }
 
 @media (prefers-reduced-motion: reduce) {

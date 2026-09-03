@@ -1,6 +1,6 @@
 # Microsoft Copilot Interview Course Research Notes
 
-Research completed September 2, 2026. Use the linked official sources for website citations and avoid presenting changing limits as permanent product guarantees.
+Research revalidated September 3, 2026. Use the linked official sources for website citations and avoid presenting changing limits as permanent product guarantees.
 
 ## Source 1 — Agent Builder
 
@@ -9,16 +9,16 @@ Research completed September 2, 2026. Use the linked official sources for websit
 
 Current Microsoft guidance says Agent Builder can create a declarative agent from a natural-language description, through a manual Configure tab, or from a template. The configuration includes name, description, instructions, knowledge sources, and starter prompts. Learners can test and refine the agent in the Try it tab. Natural-language creation and specific knowledge or capability options can vary by language, account, license, and tenant.
 
-**Course use:** Lesson 1 will build the Interview Practice Lab agent shell. Lesson 4 will require testing and refining the instructions rather than relying on one successful run.
+**Course use:** Lesson 1 will build the Interview Practice Lab agent shell. Lesson 4 will require testing and refining the instructions rather than relying on one successful run. The September 2026 update also keeps behavioral rules in the agent configuration, while job descriptions and career documents remain factual sources only.
 
 ## Source 2 — Effective Instructions
 
 **Title:** Write effective instructions for declarative agents  
 **URL:** https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions
 
-Microsoft recommends modular step-by-step workflows with a goal, action, and transition; explicit tone and output format; Markdown structure; defined domain vocabulary; named knowledge sources or capabilities; examples for complex tasks; a final self-evaluation; and iterative refinement. Ordered lists should be reserved for steps where order matters.
+Microsoft recommends modular step-by-step workflows with a goal, action, and transition; explicit tone and output format; Markdown structure; defined domain vocabulary; named knowledge sources or capabilities; examples for complex tasks; a final self-evaluation; and iterative refinement. Ordered lists should be reserved for steps where order matters. Microsoft also cautions that knowledge sources are for factual grounding, not behavior instructions, and that automatic model transitions can affect structured agent workflows.
 
-**Course use:** Every lesson prompt will separate purpose, truth rules, workflow, transition conditions, output contract, and final check. The mock-interview prompt will enforce one question at a time and prevent coaching before the learner answers.
+**Course use:** Every lesson prompt will separate purpose, truth rules, workflow, transition conditions, output contract, and final check. The mock-interview prompt will enforce one question at a time and prevent coaching before the learner answers. The Evidence Debrief will repeat a contrast test after meaningful model or instruction changes.
 
 ## Source 3 — Knowledge Sources
 
